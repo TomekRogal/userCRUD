@@ -34,6 +34,7 @@
     <!-- Content Row -->
     <!-- Card Body -->
     <div class="card-body">
+        <h2 class="h3 mb-0 text-gray-800">Dodaj użytkownika</h2>
         <form method="post">
             <div class = "form-group">
                 Nazwa użytkownika: <input name = "userName" type = "text" class = "form-control" id = "userName">

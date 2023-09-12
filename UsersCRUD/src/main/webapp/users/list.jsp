@@ -42,15 +42,15 @@
                          <th>Email</th>
                          <th>Wykonaj</th>
                      </tr>
-                     <c:forEach items="users" var="user">
+                     <c:forEach items="${users}" var="user">
                          <tr>
-<%--                             <td> ${user.id} </td>--%>
-<%--                             <td> ${user.userName} </td>--%>
-<%--                             <td> ${user.email} </td>--%>
+                             <td> ${user.getId()} </td>
+                             <td> ${user.getUserName()} </td>
+                             <td> ${user.getEmail()} </td>
                              <td>
-<%--                                 <a href='<c:url value="/user/delete?id=${user.id}"/>'>Usuń</a>--%>
-<%--                                 <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edytuj</a>--%>
-<%--                                 <a href='<c:url value="/user/show?id=${user.id}"/>'>Pokaż</a>--%>
+                                 <a href='<c:url value="/user/delete?id=${user.id}"/>'>Usuń</a>
+                                 <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edytuj</a>
+                                 <a href='<c:url value="/user/show?id=${user.id}"/>'>Pokaż</a>
                              </td>
                          </tr>
                      </c:forEach>

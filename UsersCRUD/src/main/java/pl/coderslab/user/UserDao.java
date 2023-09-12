@@ -76,9 +76,11 @@ public class UserDao {
         try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement statement =
                     conn.prepareStatement(DELETE_USER_QUERY);
+            statement.setLong(1, userID);
             statement.executeUpdate();
         } catch (SQLException e) {
             System.out.println("There is no user with id = " + userID);
+
         }
     }
 

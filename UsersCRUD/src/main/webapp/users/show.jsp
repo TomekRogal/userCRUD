@@ -22,35 +22,40 @@
 
 </head>
 <%@ include file="/users/header.jsp" %>
-<!-- End of Topbar -->
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
   <!-- /.container-fluid -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">UsersCRUD</h1>
-    <a href="list" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Lista użytkowników</a>
+    <a href="add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Dodaj użytkownika</a>
   </div>
   <!-- Content Row -->
   <!-- Card Body -->
   <div class="card-body">
-    <h2 class="h3 mb-0 text-gray-800">Edytuj użytkownika</h2>
-    <form method="post">
-      <div class = "form-group">
-        Nazwa użytkownika: <input name = "userName" type = "text" class = "form-control" id = "userName" value = "${user.userName}">
-      </div>
-      <div class = "form-group">
-        Adres Email: <input name = "userEmail" type = "email" class = "form-control" id = "userEmail" value = "${user.email}">
-      </div>
-      <div class = "form-group">
-        Hasło: <input name = "userPassword" type = "password" class = "form-control" id = "userPassword">
-      </div>
-      <button type="submit" class = "btn-primary">Edytuj użytkownika</button>
-    </form>
+    <div class="table-responsive">
+      <table class = "table">
+        <h2 class="h3 mb-0 text-gray-800">Szczegóły użytkownika</h2>
+        <tr>
+          <td>Id</td>
+                                       <td> ${user.id} </td>
+        </tr>
+        <tr>
+          <td>Nazwa użytkownika</td>
+                                       <td> ${user.userName} </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+                                           <td> ${user.email} </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
-<!-- /.container-fluid -->
 </div>
+
+<!-- /.container-fluid -->
+
 <!-- End of Main Content -->
 <%@ include file="/users/footer.jsp" %>
 </body>
