@@ -21,7 +21,16 @@
   <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
 <%@ include file="/users/header.jsp" %>
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
@@ -58,5 +67,11 @@
 
 <!-- End of Main Content -->
 <%@ include file="/users/footer.jsp" %>
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
 </body>
 </html>
